@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" type="JAX-WS">
+    <properties version="Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/FastInoset.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/javax.annotation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxb-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxb-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/gmbal-api-only.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/ha-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxb-xjc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxws-tools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxws-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jaxws-rt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/policy.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/jsr181-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/management-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/mimepull.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/saaj-impl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/stax2-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/saaj-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/streambuffer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/woodstox-core-asl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Web-Container/lib/stax-ex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
