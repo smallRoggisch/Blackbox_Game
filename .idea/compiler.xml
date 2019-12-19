@@ -10,8 +10,5 @@
         <module name="EAR" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Blackbox_Game" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
