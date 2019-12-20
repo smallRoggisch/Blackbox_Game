@@ -10,6 +10,7 @@ import blackbox.usermanagement.common.UserManagementLocal;
 import blackbox.usermanagement.common.UserManagementRemote;
 import blackbox.usermanagement.treeobjects.User;
 
+
 @Stateful
 public class UserManagementBean implements UserManagementLocal, UserManagementRemote {
 
@@ -21,19 +22,27 @@ public class UserManagementBean implements UserManagementLocal, UserManagementRe
         allUsers = new LinkedHashMap<Long, User>();
     }
 
+
+    //UserManagement
     @Override
-    public Long create(String email, String password) {
+    public List<User> readUsers() {
+        return new ArrayList<User>(allUsers.values());
+    }
+
+
+    //REMOTE
+    @Override
+    public boolean register(String email, String password) {
         if(email == null) {
             throw new IllegalArgumentException("Email cannot be null.");
         }
         if(password == null) {
             throw new IllegalArgumentException("Password cannot be null.");
         }
-
-        User newOne = new User(email, password);
-        allUsers.put(lastUserId, newOne);
-        lastUserId++;
-        return newOne.userID();
+        //createUser()
+        //long ....
+        //return true
+        return false;
     }
 
     @Override
@@ -49,21 +58,47 @@ public class UserManagementBean implements UserManagementLocal, UserManagementRe
     }
 
     @Override
+    public boolean logIn(String email, String password) {
+        //checkCredentials
+        //user.online = true;
+        return false;
+    }
+
+    @Override
+    public boolean logOut(String email) {
+        //user.online = false;
+        return false;
+    }
+
+
+    //LOCAL
+    @Override
+    public Long createUser(String email, String password) {
+        if(email == null) {
+            throw new IllegalArgumentException("Email cannot be null.");
+        }
+        if(password == null) {
+            throw new IllegalArgumentException("Password cannot be null.");
+        }
+
+        User newOne = new User(email, password);
+        allUsers.put(lastUserId, newOne);
+        lastUserId++;
+        return newOne.userID();
+    }
+
+    @Override
     public void update(User user) {
         //tbd
     }
 
     @Override
-    public void delete(String email) {
+    public void deleteUser(String email) {
         //tbd
     }
 
-    @Override
-    public List<User> readUsers() {
-        return new ArrayList<User>(allUsers.values());
-    }
 
-
+    //PRIVATE METHODS
     private User getUser(String email) {
         for (User user: allUsers.values()) {
             if (user.email() == email) {

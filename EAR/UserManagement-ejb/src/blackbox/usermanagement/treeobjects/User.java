@@ -6,11 +6,13 @@ public class User {
     //private String username;
     private String email;
     private String password;
+    private boolean online;
 
     public User(String email, String password) {
         this.userID += 1;
         this.email = email;
         this.password = password;
+        this.online = true;
     }
 
     public long userID() {
@@ -36,5 +38,12 @@ public class User {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean online() {
+        return online;
+    }
+    public void setOnline(boolean online) {
+        this.online = online;
     }
 }
