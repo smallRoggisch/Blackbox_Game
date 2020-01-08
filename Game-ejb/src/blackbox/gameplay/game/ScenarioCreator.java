@@ -5,22 +5,23 @@ import blackbox.gameplay.treeobjects.Messagetype;
 import blackbox.gameplay.treeobjects.Node;
 import blackbox.gameplay.treeobjects.NodeMessage;
 
+import javax.ejb.Singleton;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
+@Singleton
 public class ScenarioCreator {
 
     private static List<Node> scenarioOne = null;
     private static List<Node> scenarioTwo = null;
 
-    public static void main(String[] args)
+    public ScenarioCreator()
     {
         scenarioOne = createScenarioOne();
         scenarioTwo = createScenarioTwo();
     }
 
-    public static List<Node> createScenarioOne()
+    public List<Node> createScenarioOne()
     {
         List<Node> nodeList = new ArrayList<Node>();
 
@@ -59,10 +60,14 @@ public class ScenarioCreator {
         nodeList.add(ending3);
         Node d = null;
         nodeList.add(d);
+        Node dAlternative = null;
+        nodeList.add(dAlternative);
         Node d1 = null;
         nodeList.add(d1);
         Node d2 = null;
         nodeList.add(d2);
+        Node d2alternative = null;
+        nodeList.add(d2alternative);
         Node d3 = null;
         nodeList.add(d3);
         Node g1 = null;
@@ -85,8 +90,12 @@ public class ScenarioCreator {
         answersForCurrentNode.add(answer1);
         Answer answer2 = new Answer("Supi, worum geht's?", a2);
         answersForCurrentNode.add(answer2);
-        ausgangssituation = new Node(new NodeMessage(Messagetype.Text, "Hey Joe, ich hab da einen neuen Fall für dich."), answersForCurrentNode);
+        LinkedList<NodeMessage> messageList = new LinkedList<NodeMessage>();
+        NodeMessage message1 = new NodeMessage(Messagetype.Text, "Hey Joe, ich hab da einen neuen Fall für dich.");
+        messageList.add(message1);
+        ausgangssituation = new Node(messageList, answersForCurrentNode);
         answersForCurrentNode.clear();
+        messageList.clear();
 
         //a2
         answer1 = new Answer("Hört sich spannend an. Leider hab ich gerade keinen Droiden frei, der diese Aufgaben übernehmen kann.", ending1);
@@ -97,14 +106,17 @@ public class ScenarioCreator {
         answersForCurrentNode.add(answer3);
         Answer answer4 = new Answer("Okay ich schicke schonmal einen Spuren- und Kontaktdroiden los. Leitest du mir die Akte weiter?", skd56);
         answersForCurrentNode.add(answer4);
-        a2 = new Node(new NodeMessage(Messagetype.Text, "Eine junge Frau hat soeben einen toten Mann in ihrer Wohnung gefunden. Sie steht jetzt unter Schock. Jemand muss zu ihr, sie befragen und die Spuren müssen dort gesichert werden."), answersForCurrentNode);
+        message1 = new NodeMessage(Messagetype.Text, "Eine junge Frau hat soeben einen toten Mann in ihrer Wohnung gefunden. Sie steht jetzt unter Schock. Jemand muss zu ihr, sie befragen und die Spuren müssen dort gesichert werden.");
+        messageList.add(message1);
+        a2 = new Node(messageList, answersForCurrentNode);
         answersForCurrentNode.clear();
+        messageList.clear();
 
         //
         return nodeList;
     }
 
-    public static List<Node> createScenarioTwo()
+    public List<Node> createScenarioTwo()
     {
         List<Node> nodeList = new ArrayList<Node>();
 
