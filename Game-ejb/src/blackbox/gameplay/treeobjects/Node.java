@@ -9,11 +9,11 @@ public class Node {
     @Id
     private long nodeID;
     @Column
-    private NodeMessage messageToClient;
+    private LinkedList<NodeMessage> messageToClient;
     @Column
     private LinkedList<Answer> possibleAnswers;
 
-    public Node(NodeMessage message, LinkedList<Answer> possibleAnswers)
+    public Node(LinkedList<NodeMessage> message, LinkedList<Answer> possibleAnswers)
     {
         this.nodeID = nodeIdCounter++;
         this.messageToClient = message;
