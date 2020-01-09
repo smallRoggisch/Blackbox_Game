@@ -1,15 +1,25 @@
 package blackbox.usermanagement.treeobjects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-    private long userID = 0;
-    //private String username;
+    private static long userIdCounter = 0;
+    @Id
+    private long userID;
+    //private String username; //nicht gebraucht, username ist email
+    @Column
     private String email;
+    @Column
     private String password;
+    @Column
     private boolean online;
 
     public User(String email, String password) {
-        this.userID += 1;
+        this.userID = userIdCounter++;
         this.email = email;
         this.password = password;
         this.online = true;
@@ -18,13 +28,6 @@ public class User {
     public long userID() {
         return userID;
     }
-
-    /*public String username() {
-        return username;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }*/
 
     public String email() {
         return email;
