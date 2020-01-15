@@ -1,5 +1,5 @@
 import blackbox.gameplay.common.*;
-import blackbox.gameplay.treeobjects.StatisticScenarioPath;
+import gameplay.treeobjects.StatisticScenarioPath;
 
 public class StatisticCalculatorBean implements StatisticCalculatorRemote, StatisticCalculatorLocal{
 

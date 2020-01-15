@@ -19,5 +19,14 @@
     <orderEntry type="library" scope="PROVIDED" name="JBoss 18.0.0.Final" level="application_server_libraries" />
     <orderEntry type="library" name="Maven: javax:javaee-api:8.0.1" level="project" />
     <orderEntry type="module" module-name="Game-common" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../Game-common/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

@@ -1,6 +1,6 @@
 package blackbox.gameplay.common;
 
-import blackbox.gameplay.treeobjects.Node;
+import gameplay.treeobjects.Node;
 
 public interface PathCalculatorLocal {
 

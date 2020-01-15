@@ -1,14 +1,15 @@
-package blackbox.gameplay.game;
+package gameplay.game;
 
-import blackbox.gameplay.treeobjects.Answer;
-import blackbox.gameplay.treeobjects.Messagetype;
-import blackbox.gameplay.treeobjects.Node;
-import blackbox.gameplay.treeobjects.NodeMessage;
+import gameplay.treeobjects.Answer;
+import gameplay.treeobjects.Messagetype;
+import gameplay.treeobjects.Node;
+import gameplay.treeobjects.NodeMessage;
 
 import javax.ejb.Singleton;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 @Singleton
 public class ScenarioCreator {
 

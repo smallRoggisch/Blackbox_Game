@@ -1,6 +1,6 @@
 package blackbox.gameplay.common;
 
-import blackbox.gameplay.treeobjects.StatisticScenarioPath;
+import gameplay.treeobjects.StatisticScenarioPath;
 
 public interface StatisticCalculatorLocal {
     public void updateCurrentGamepath(StatisticScenarioPath path);

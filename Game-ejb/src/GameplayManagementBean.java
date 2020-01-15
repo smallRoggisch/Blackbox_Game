@@ -1,6 +1,5 @@
 import blackbox.gameplay.common.*;
-import blackbox.gameplay.treeobjects.*;
-import com.sun.imageio.plugins.jpeg.JPEGMetadata;
+import gameplay.treeobjects.*;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,7 +27,7 @@ StatisticScenarioPath currentPath;
         currentPath.add(currentNode.getID());
         if(currentNode.isEnd()) {
             statisticCalculator.completeCurrentGamepath(currentPath);
-            sendMsgToClient("Ende erreicht",Messagetype.Text);
+            sendMsgToClient("Ende erreicht", Messagetype.Text);
         }
         else {
             statisticCalculator.updateCurrentGamepath(currentPath);

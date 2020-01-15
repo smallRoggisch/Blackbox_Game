@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="EJB_1" />
         <module name="EAR" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EJB_1" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

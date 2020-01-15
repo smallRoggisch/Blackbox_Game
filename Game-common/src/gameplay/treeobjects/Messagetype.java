@@ -1,4 +1,4 @@
-package blackbox.gameplay.treeobjects;
+package gameplay.treeobjects;
 
 public enum Messagetype {
     Text,

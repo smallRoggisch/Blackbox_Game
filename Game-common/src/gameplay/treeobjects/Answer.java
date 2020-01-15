@@ -1,6 +1,7 @@
-package blackbox.gameplay.treeobjects;
+package gameplay.treeobjects;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 /**
  *
