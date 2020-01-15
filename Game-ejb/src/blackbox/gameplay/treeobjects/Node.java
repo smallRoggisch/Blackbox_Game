@@ -2,6 +2,7 @@ package blackbox.gameplay.treeobjects;
 
 import javax.persistence.*;
 import java.util.LinkedList;
+import java.util.List;
 
 @Entity
 public class Node {
@@ -20,5 +21,27 @@ public class Node {
         this.possibleAnswers = possibleAnswers;
     }
 
+    public Long getID() {
+        return nodeID;
+    }
+
+    /**
+     * Prüft, ob der Knoten ein Endknoten ist, also keine Antworten mehr hat
+     * @return
+     */
+    public boolean isEnd() {
+        if(possibleAnswers.size()==0){
+            return true;
+        }
+        return false;
+    }
+
+    public List<Answer> getAnswerList() {
+        return possibleAnswers;
+    }
+
+    public List<NodeMessage> getMessageToClientList() {
+        return messageToClient;
+    }
 
 }

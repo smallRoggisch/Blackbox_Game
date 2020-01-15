@@ -1,6 +1,7 @@
 package blackbox.gameplay.treeobjects;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class NodeMessage {
@@ -28,5 +29,19 @@ public class NodeMessage {
         this.type = type;
         this.message = message;
         this.timeout = 0;
+    }
+    public Messagetype getMessgetype() {
+        return type;
+    }
+
+    public String getMessageString() {
+        return message;
+    }
+
+    public void startTimeout() {
+        Date endDate=new Date(new Date().getTime()+timeout);
+        while(new Date().before(endDate)){
+        }
+        return;
     }
 }

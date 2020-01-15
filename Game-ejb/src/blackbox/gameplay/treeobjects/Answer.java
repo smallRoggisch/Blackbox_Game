@@ -5,7 +5,6 @@ import javax.persistence.*;
 /**
  *
  */
-@Entity
 public class Answer {
     private static long answerIdCounter = 0;
     @Id
@@ -20,5 +19,12 @@ public class Answer {
         this.answerID = answerIdCounter++;
         this.answerMessage = answerMessage;
         this.answerNode = answerNode;
+    }
+    public long getAnswerID() {
+        return answerID;
+    }
+
+    public boolean hasMessage(String pMsg) {
+        return answerMessage.equals(pMsg);
     }
 }
