@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/Umbruch       xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
